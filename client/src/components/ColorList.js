@@ -10,6 +10,7 @@ const initialColor = {
 const ColorList = ({ colors, updateColors }) => {
   //console.log(colors);
   const [editing, setEditing] = useState(false);
+  const [adding, setAdding] = useState(true);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
   const [colorToAdd, setColorToAdd] = useState(initialColor);
 
@@ -94,6 +95,9 @@ const ColorList = ({ colors, updateColors }) => {
           </li>
         ))}
       </ul>
+      {adding && (
+        <button onClick={setAdding(!adding)}>Add a Color</button>
+      )}
       {editing && (
         <form onSubmit={saveEdit}>
           <legend>edit color</legend>
@@ -127,8 +131,9 @@ const ColorList = ({ colors, updateColors }) => {
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
       
+      {!adding && (
 
-      <form onSubmit={addColor}>
+      <form className="myForm" onSubmit={addColor}>
           <legend>add color</legend>
           <label>
             color name:
@@ -136,8 +141,8 @@ const ColorList = ({ colors, updateColors }) => {
               onChange={e =>
                 setColorToAdd({
                    ...colorToAdd, 
-                   color: e.target.value })
-              }
+                   color: e.target.value })}
+              
               value={colorToAdd.color}
             />
           </label>
@@ -154,9 +159,10 @@ const ColorList = ({ colors, updateColors }) => {
             />
           </label>
           <div className="button-row">
-            <button type="submit">add</button>
+            <button  type="submit">add</button>
           </div>
         </form>
+      )}
       
 
     </div>
