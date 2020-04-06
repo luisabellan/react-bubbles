@@ -91,6 +91,7 @@ form input {
   margin-bottom: 0rem;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .myForm legend {
@@ -108,7 +109,8 @@ form input {
 }
 
 .myForm input {
-  width: 100px;
+  width: 5rem;
+  margin-left: 2rem;
 }
 
 .myForm button {
