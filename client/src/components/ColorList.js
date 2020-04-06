@@ -64,7 +64,6 @@ const ColorList = ({ colors, updateColors }) => {
     .then(res => {
       console.log(res);
       setColorToAdd(colorToAdd);
-      setColorToAdd(colorToAdd)
 
     })
     .catch(err => {
