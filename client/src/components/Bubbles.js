@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Pack } from "@potion/layout";
-import { Svg, Circle } from "@potion/element";
+import { Pack, Pie } from "@potion/layout";
+import { Svg, Circle, Arc } from "@potion/element";
 
 const Bubbles = ({ colors }) => {
   const [bubbleData, setBubbleData] = useState([]);
@@ -15,7 +15,7 @@ const Bubbles = ({ colors }) => {
   return (
     <div className="bubble-wrap">
       <p>bubbles</p>
-      <Svg width={400} height={400}>
+      {/*  <Svg width={400} height={400}>
         <Pack
           data={{
             children: bubbleData
@@ -45,6 +45,40 @@ const Bubbles = ({ colors }) => {
               .filter(v => v)
           }
         </Pack>
+      </Svg> */}
+
+      <Svg width={400} height={400}>
+        <Pie
+          data={{
+            children: bubbleData
+          }}
+          sum={datum => datum.value}
+          id={datum => datum.id}
+          sort={(a, b) => a.id - b.id}
+          nodeEnter={d => ({ ...d, startAngle: d.endAngle })}
+          animate
+        >
+          {nodes =>
+            nodes.map(({ startAngle, endAngle, key }, i) => {
+              if (i < colors.length) {
+                  return (
+                    <Arc
+                      key={key}
+                      innerRadius={0}
+                      outerRadius={100}
+                      startAngle={startAngle}
+                      endAngle={endAngle}
+                      fill={colors[i].code.hex}
+                      stroke="white"
+                      strokeWidth={1}
+                    />
+                  
+                  )
+              }
+              
+            })
+          }
+        </Pie>
       </Svg>
     </div>
   );

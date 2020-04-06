@@ -57,12 +57,14 @@ const ColorList = ({ colors, updateColors }) => {
 
   const addColor = (e,color) => {
   e.preventDefault()
+ 
     // make a delete request to delete this color
     axiosWithAuth()
     .post(`/colors/`, colorToAdd)
     .then(res => {
       console.log(res);
       setColorToAdd(colorToAdd);
+      
 
     })
     .catch(err => {
