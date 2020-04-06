@@ -1,0 +1,109 @@
+div.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+div.form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 2px solid #9877cc;
+  width: 25rem;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 0rem;
+}
+
+div.form form label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #3315a0;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+div.form form input {
+  border: 2px solid #3315a0;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  height: 1.7rem;
+  padding-top: 1.5rem;
+}
+
+div.form form div.username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+div.form form div.username input.username {
+  margin: 1rem 0 1rem 1rem;
+  font-size: 1.4rem;
+  color: #3315a0;
+  margin-bottom: 2rem;
+}
+
+div.form form div.password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+div.form form div.password input.password {
+  margin: 1rem 0 2rem 1rem;
+  font-size: 1.4rem;
+  color: #3315a0;
+}
+
+div.form form div.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+div.form form div.button button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-self: center;
+  width: 8rem;
+  height: 3rem;
+  margin: 3rem;
+  background-color: #3315a0;
+  color: whitesmoke;
+  border: #3315a0;
+  font-size: 1.3rem;
+}
