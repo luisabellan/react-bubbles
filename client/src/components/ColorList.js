@@ -32,8 +32,7 @@ const ColorList = ({ colors, updateColors }) => {
     axiosWithAuth()    
       .put(`/colors/${colorToEdit.id}`, colorToEdit)
       .then(res => {
-        colorToEdit = res.data.color
-     setColorToEdit(colorToEdit)
+        setColorToEdit(colorToEdit);
        editColor(colorToEdit)
         
       })
@@ -64,7 +63,7 @@ const ColorList = ({ colors, updateColors }) => {
     .post(`/colors/`, colorToAdd)
     .then(res => {
       console.log(res);
-      colorToAdd = res.data.color
+      setColorToAdd(colorToAdd);
       setColorToAdd(colorToAdd)
 
     })
