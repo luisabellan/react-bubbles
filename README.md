@@ -32,8 +32,7 @@ If you login correctly you are given a token, this is token must match the one i
 
 - [ ] What steps can you take in your web apps to keep your data secure?
 
-  use authentication, safe passwords enforment, https, 2-step verification, captchas, etc
-
+Use authentication, safe passwords enforment, https, 2-step verification, captchas, etc
 
 - [ ] Describe how web servers work.
 Web servers are listening for requests, processes the requests, processes them and return the information requested if authorization is granted in the form of a website to the clients
@@ -43,7 +42,6 @@ Create = PUT (+new uri)
 Read = GET
 Update = PUT (+existing uri)
 Delete = DELETE
-
 
 ## Project Set Up
 
@@ -64,7 +62,7 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge ```<firstName-lastName>``` Branch into master (student's  Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
 - [ ] PM then will count the HW as done by  merging the branch back into master.
 
@@ -89,19 +87,19 @@ Build a login form to authenticate your users.
 
 ### API Documentation
 
-  * **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
-  * **[GET]** to `/api/colors`: returns the list of colors and their hex codes.
-  * **[POST]** to `/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`).
-  * **[PUT]** to `/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
-  * **[DELETE]** to `/api/colors/123`: removes the color using the `id` passed as part of the URL (123 in example).
+  **[POST]**  to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
+  **[GET]** to `/api/colors`: returns the list of colors and their hex codes.
+  **[POST]** to `/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`).
+  **[PUT]** to `/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
+  **[DELETE]** to `/api/colors/123`: removes the color using the `id` passed as part of the URL (123 in example).
 
 ## STRETCH PROBLEMS
 
-**HTTP/Axios Stretch Problems**
+### HTTP/Axios Stretch Problems
 
 - [* ] Build a form at the bottom of `ColorList.js` to add new colors to the colors data
 
-**Data Visualization**
+### Data Visualization
 
 - [ ] Look at [Potion JS](https://potion.js.org/). This is the library used to display the color data
 - [ ] Play around with the data visualization happening in `Bubbles.js`. Have fun with this! Try different components from the library, or see if you can add props to change the UI a bit.
