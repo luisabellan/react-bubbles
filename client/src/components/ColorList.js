@@ -17,6 +17,7 @@ const ColorList = ({ colors, updateColors }) => {
   const editColor = color => {
     setEditing(true);
     setColorToEdit(color);
+    
   };
 
 
@@ -47,7 +48,7 @@ const ColorList = ({ colors, updateColors }) => {
     .delete(`/colors/${color.id}`)
     .then(res => {
       console.log(res);
-
+      setEditing(false)
       setColorToEdit({})
 
     })
