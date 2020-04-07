@@ -84,6 +84,44 @@ form {
   }
 }
 
+.myForm {
+  position: absolute;
+  top: 40rem;
+  left: 0;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  legend {
+    padding-left: 40px;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 16px;
+  }
+
+  label {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 36px 4px 40px;
+  }
+
+  input {
+    
+    width: 5rem;
+    margin-left: 2rem;
+  }
+
+button {
+  width: 4rem;
+  margin: 0 auto;
+}
+
+
+}
+
 .button-row {
   display: flex;
   justify-content: space-between;
