@@ -148,8 +148,9 @@ app.put("/api/colors/:id", authenticator, (req, res) => {
 });
 
 app.delete("/api/colors/:id", authenticator, (req, res) => {
-  if (!req.params.id)
+  if (!req.params.id) {
     res.status(400).send("Your request is missing the color id");
+  }
   colors = colors.filter(color => `${color.id}` !== req.params.id);
   res.status(202).send(req.params.id);
 });
